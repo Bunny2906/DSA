@@ -52,3 +52,4 @@ Enter array elements :
 maximum element is :78
 minimum element is :6
 */
+
