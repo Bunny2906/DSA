@@ -21,6 +21,7 @@ void reverse(struct Array arr)
 void Display(struct Array arr)
 {
     int i;
+    cout<<"Reversed Array is :";
     for(i=0;i<arr.size;i++)
     {
         cout<<arr.A[i]<<" ";
@@ -32,7 +33,7 @@ int main()
     cout<<"Enter the size of array :";  //Taking input from user
     cin>>arr.size;
     arr.A=new int[arr.size];           //creating dynamic array
-    cout<<"Enter array elements :";
+    cout<<"Enter array elements :\n";
     for(int i=0;i<arr.size;i++)
     {
         cin>>arr.A[i];
@@ -41,3 +42,14 @@ int main()
     Display(arr);
     return 0;
 }
+/*
+Sample output :
+Enter the size of array :5
+Enter array elements :
+1
+2
+3
+4
+5
+Reversed Array is :5 4 3 2 1
+*/
