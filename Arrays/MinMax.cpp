@@ -1,4 +1,5 @@
 //Finding minimum and maximum elements in Array in 'Single Scan'
+
 #include<iostream>
 using namespace std;
 struct Array
@@ -39,3 +40,15 @@ int main()
     minMax(arr);
     return 0;
 }
+/*
+Sample output:
+Enter the size of array :5
+Enter array elements :
+32
+12
+6
+78
+43
+maximum element is :78
+minimum element is :6
+*/
