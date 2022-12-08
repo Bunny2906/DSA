@@ -3,6 +3,7 @@
 /* Here we are defining a structure with two members 'size' and '*A'
 '*A' is for creating a dynamic array,which can be modified easily.
 In 'reverse' function we're using a single 'for' loop to reverse the array tht reduces time complexity.*/
+
 #include<iostream>
 using namespace std;
 struct Array
