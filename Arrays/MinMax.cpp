@@ -1,4 +1,4 @@
-//Finding minimum and maximum elements in Array in 'Single Scan'
+//Finding minimum and maximum elements of Array in 'Single Scan'
 
 #include<iostream>
 using namespace std;
