@@ -26,3 +26,7 @@ int main()
     }
     return 0;
 }
+/*
+Output:Array is sorted
+*/
+
