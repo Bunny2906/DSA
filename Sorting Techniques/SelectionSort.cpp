@@ -14,7 +14,7 @@ struct Array
     int size;
     int *A;
 };
-void insertionSort(struct Array arr)
+void selectionSort(struct Array arr)
 {
     int i,j;
     for(i=0;i<arr.size;i++)
@@ -39,7 +39,7 @@ int main()
     {
         cin>>arr.A[i];
     }
-    insertionSort(arr);
+    selectionSort(arr);
     cout<<"Sorted List is:";
     for(int i=0;i<arr.size;i++)
     {
