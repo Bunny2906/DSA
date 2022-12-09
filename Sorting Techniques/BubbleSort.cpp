@@ -16,16 +16,16 @@
 using namespace std;
 struct Array
 {
-    int n;
+    int size;
     int *A;
 };
 void bubbleSort(struct Array arr)
 {
     int flag;
-    for(int i=0;i<arr.n-1;i++)
+    for(int i=0;i<arr.size-1;i++)
     {
         flag=0;
-        for(int j=0;j<arr.n-i-1;j++)
+        for(int j=0;j<arr.size-i-1;j++)
         {
             if(arr.A[j] > arr.A[j+1])
             {
@@ -41,16 +41,16 @@ int main()
 {
     struct Array arr;
     cout<<"enter the size of list :";
-    cin>>arr.n; 
-    arr.A=new int[arr.n];
+    cin>>arr.size; 
+    arr.A=new int[arr.size];
     cout<<"enter list elements :\n";
-    for(int i=0;i<arr.n;i++)
+    for(int i=0;i<arr.size;i++)
     {
         cin>>arr.A[i];
     }
     bubbleSort(arr);
     cout<<"Sorted List is:";
-    for(int i=0;i<arr.n;i++)
+    for(int i=0;i<arr.size;i++)
     {
         cout<<arr.A[i]<<" ";
     }
