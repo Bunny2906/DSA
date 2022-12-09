@@ -1,3 +1,5 @@
+//Reversing Alternate Elements of Array
+
 #include<iostream>
 using namespace std;
 int main()
@@ -15,3 +17,6 @@ int main()
     }
     return 0;
 }
+/*
+Output :20 10 40 30 60 50
+*/
