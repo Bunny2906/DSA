@@ -1,3 +1,10 @@
+//Insertion Sort using Array.
+/* -->Assume that first element in the list is sorted portion and all the remaining elements are in unsorted portion.
+   -->Take the first element from the unsorted portion and insert it into sorted portion at correct position.
+   -->Repeat the same until all the elements from unsorted portion are moved into sorted portion. */
+/*Insertion sort is both "Adaptive & Stable" because it takes minimum time when list is already sorted...and
+  it is stable because it sorts the list even if duplicates are available.*/
+
 #include<iostream>
 using namespace std;
 struct Array
