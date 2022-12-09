@@ -39,9 +39,22 @@ int main()
         cin>>arr.A[i];
     }
     insertionSort(arr);
+   cout<<"Sorted Array is:";
     for(int i=0;i<arr.size;i++)
     {
         cout<<arr.A[i]<<" ";
     }
     return 0;
 }
+/*
+Sample Output:
+Enter the size of array :5
+Enter array elements :
+30
+12
+56
+9
+101
+Sorted Array is:9 12 30 56 101
+*/
+
