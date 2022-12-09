@@ -1,15 +1,12 @@
+//Checking if array is sorted or not.
+
 #include<iostream>
 using namespace std;
-struct Array
+int isSorted(int A[],int n)
 {
-    int A[20];
-    int size;
-};
-int isSorted(struct Array arr)
-{
-    for(int i=0;i<arr.size-1;i++)
+    for(int i=0;i<n-1;i++)
     {
-        if(arr.A[i] > arr.A[i+1])
+        if(A[i] > A[i+1])
         {
            return 0;
         }
@@ -18,9 +15,8 @@ int isSorted(struct Array arr)
 }
 int main()
 { 
-    struct Array arr={{1,2,3,4,5,6,7},7};
-    cout<<isSorted(arr)<<endl;
-    if(isSorted(arr))
+    A[]={1,2,3,4,5,6,7};
+    if(isSorted(A,7))
     {
         cout<<"Array is sorted ";
     }
@@ -28,6 +24,5 @@ int main()
     {
         cout<<"Array is not sorted ";
     }
-    return 0;
     return 0;
 }
