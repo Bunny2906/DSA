@@ -1,9 +1,11 @@
+//Checking if an Array contains duplicates and no.of times it is repeated.
+
 #include<iostream>
 using namespace std;
 struct Array 
 {
-    int A[20];
     int size;
+    int *A;
 };
 void countDuplicate(struct Array arr)
 {   
@@ -30,6 +32,35 @@ void countDuplicate(struct Array arr)
 }
 int main()
 {
-    struct Array arr={{3,8,6,8,10,15,15,15,12,20},11};
+    struct Array arr;
+    cout<<"Enter the size of Array :";
+    cin>>arr.size;
+    cout<<"Enter Array elements :\n";
+    for(int i=0;i<arr.size;i++)
+    {
+        cin>>arr.A[i];
+    }
     countDuplicate(arr);
+    return 0;
 }
+/*
+Sample Output:
+Enter the size of Array :10
+Enter Array elements :
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+1 is repeated 2 times
+2 is repeated 2 times
+3 is repeated 2 times
+4 is repeated 2 times
+5 is repeated 2 times
+*/
+
