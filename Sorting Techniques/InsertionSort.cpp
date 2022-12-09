@@ -39,7 +39,7 @@ int main()
         cin>>arr.A[i];
     }
     insertionSort(arr);
-   cout<<"Sorted Array is:";
+    cout<<"Sorted Array is:";
     for(int i=0;i<arr.size;i++)
     {
         cout<<arr.A[i]<<" ";
