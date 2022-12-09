@@ -1,3 +1,5 @@
+//Finding sum of first 'n' elements in Array.
+
 #include<iostream>
 using namespace std;
 int sumrecursive(int A[],int n)
@@ -20,3 +22,9 @@ int main()
     cout<<"sum of first "<<n<<" elements is :"<<sumrecursive(A,n-1);
     return 0;
 }
+/*
+Sample output:
+enter no of elements to be added :5
+sum of first 5 elements is :135
+*/
+
