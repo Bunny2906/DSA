@@ -1,3 +1,5 @@
+//Finding a pair that gives us required sum from Array.
+
 #include<iostream>
 using namespace std;
 int pairWithSumK(int A[],int n)
@@ -24,3 +26,10 @@ int main()
     pairWithSumK(A,size);
     return 0;
 }
+/*
+Sample Output:
+Enter required sum :10
+3 and 7 is a pair with sum 10
+8 and 2 is a pair with sum 10
+*/
+
