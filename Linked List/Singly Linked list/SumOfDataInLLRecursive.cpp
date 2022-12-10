@@ -73,5 +73,14 @@ int main()
 }
 /*
 Sample Output:
-
+no of elements to be inserted? :5
+enter 5 LL elements :
+50
+10
+40
+20
+30
+50 10 40 20 30
+Sum is :150
 */
+
