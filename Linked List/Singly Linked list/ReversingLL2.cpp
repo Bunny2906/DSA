@@ -57,3 +57,9 @@ int main()
     reverseLL(first);
     return 0;
 }
+/*
+Output:
+1 2 3 4
+Reversed LL is :4 3 2 1
+*/
+
