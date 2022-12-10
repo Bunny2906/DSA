@@ -74,8 +74,12 @@ void checkSorted(struct Node *p)
 }
 int main()
 {
-    int A[]={1,2,3,4,5,6,7,8};
+    int A[]={1,2,3,9,5,6,7,8};
     create(A,8);
     checkSorted(first);
     return 0;
 }
+/*
+Output:
+LL is not sorted.
+*/
