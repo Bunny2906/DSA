@@ -51,3 +51,7 @@ int main()
     count(first);
     return 0;
 }
+/*
+Output:
+Length of LL is :5
+*/
