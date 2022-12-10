@@ -68,7 +68,7 @@ int LinkedList::Length()
         len++;
         p=p->next;
     }
-    cout<<len<<"\n";
+    cout<<"length is :"<<len<<"\n";
 }
 void LinkedList::Insert(int index,int x)
 {
@@ -138,3 +138,11 @@ int main()
     l.Display();
     return 0;
 }
+/*
+Output:
+1 2 3 4 5
+length is :5
+1 2 3 4 5 6
+length is :6
+2 3 4 5 6
+*/
