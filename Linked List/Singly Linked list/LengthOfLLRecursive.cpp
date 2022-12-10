@@ -52,3 +52,7 @@ int main()
     cout<<"\nlength of LL is:"<<count(first);
     return 0;
 }
+/*
+Output:
+length of LL is:5
+*/
