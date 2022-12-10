@@ -74,3 +74,12 @@ int main()
     insert(9,6);
     return 0;
 }
+/*
+Output:
+Initial LL elements are:1 2 3 4 5
+Updated LL Elements are :6 1 2 3 4 5
+Updated LL Elements are :6 1 2 7 3 4 5
+Updated LL Elements are :6 1 2 7 3 8 4 5       
+Updated LL Elements are :6 1 2 7 3 8 9 4 5 
+*/
+
