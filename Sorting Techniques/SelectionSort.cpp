@@ -1,12 +1,3 @@
-//Selection Sort using Array
-/*-->A list with n elements requires (n-1) passes.
-  -->In first pass, select the first element in the list and compare it with all other elements.
-     While comparison,if any element is found smaller than the selected element,then swap selected element and that smaller element.
-  -->After first pass, The smallest element in the list will be at first position.
-  -->In second pass, select the second element in the list and compare it with all other elements
-     Similarly after second pass, the second smallest element in the list will be at second position.
-  -->Repeat the same procedure for entire list. 
-*/
 #include<iostream>
 using namespace std;
 struct Array
@@ -14,7 +5,7 @@ struct Array
     int size;
     int *A;
 };
-void selectionSort(struct Array arr)
+void insertionSort(struct Array arr)
 {
     int i,j;
     for(i=0;i<arr.size;i++)
@@ -39,7 +30,7 @@ int main()
     {
         cin>>arr.A[i];
     }
-    selectionSort(arr);
+    insertionSort(arr);
     cout<<"Sorted List is:";
     for(int i=0;i<arr.size;i++)
     {
@@ -47,15 +38,3 @@ int main()
     }
     return 0;
 }
-/*
-Sample Output:
-Enter the size of list :5
-Enter list elements :
-34
-12
-10
-26
-24
-Sorted List is:10 12 24 26 34
-*/
-
