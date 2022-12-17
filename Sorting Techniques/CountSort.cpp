@@ -1,3 +1,4 @@
+//Count Sort Using Array.
 /*-->find maximum element in the given list.
   -->define a auxilary array of size 1 more than maximum element and initialize it with 0's.
   -->count each element in the list repeated how many times and place count at appropriate index.(Hashing)
