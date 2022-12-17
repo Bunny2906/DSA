@@ -1,3 +1,11 @@
+//Selection Sort Using Dynamic Array.
+/*-->Select the first element of the list.
+  -->Compare the selected element with all other elements in the list one by one.
+  -->In every comparison, if any element found to be smaller than selected element, then swap them.
+  -->After first iteration, the first element at first position is sorted.(i.e; Small element in the list is at first position).
+  -->Now do the same for second element and for the entire list.
+  -->A list with 'n' elements requires (n-1)iterations(passes).
+*/
 #include<iostream>
 using namespace std;
 struct Array
@@ -38,3 +46,14 @@ int main()
     }
     return 0;
 }
+/*
+Sample Output:
+Enter the size of list :5
+Enter list elements :
+23
+12
+45
+2
+26
+Sorted List is:2 12 23 26 45 
+*/
