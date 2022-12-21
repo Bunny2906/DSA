@@ -47,17 +47,6 @@ void Insert(Node *p,int x)
         p->next=t;
     }
 }
-void Display(struct Bin b)
-{
-    for(int i=0;i<16;i++)
-    {
-        while(b.bins[i]!=NULL)
-        {
-            cout<<b.bins[i]->data<<" ";
-            b.bins[i]=b.bins[i]->next;
-        }cout<<endl;
-    }
-}
 int Delete(struct Bin b,int i)
 {
     Node *temp,*p=b.bins[i];
