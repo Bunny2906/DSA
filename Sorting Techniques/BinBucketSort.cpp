@@ -1,5 +1,6 @@
-// Bin/Bucket Sort.
+// Bin/Bucket Sort using Linked List.
 /*-->We need an auxilary(extra) array of size one more than maximum element in the list.
+     Bin/Bucket sort uses very large space.
   -->Each position or each index in auxilary array is considered as bin/bucket.
   -->Initially, all the elements of auxilary array are NULL.Auxilary array is a array of Linked Lists.
   -->Copy the elements of our list into auxilary array as,
