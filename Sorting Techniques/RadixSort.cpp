@@ -64,7 +64,7 @@ int Delete(struct Bin b,int i)
     }
     return x;
 }
-void bucketSort(int A[],int n)
+void RadixSort(int A[],int n)
 {
     int i,j;
     b.bins=new Node*[10];
@@ -118,7 +118,7 @@ void bucketSort(int A[],int n)
 int main()
 {
     int A[]={301,700,450,654,496,166,990,522};
-    bucketSort(A,8);
+    RadixSort(A,8);
     for(int i=0;i<8;i++)
     {
         cout<<A[i]<<" ";
