@@ -21,19 +21,6 @@ struct Bin
 {
     Node **bins;
 }b;
-int findMax(int A[],int n)
-{
-    int i,max;          //function to find maximum number.
-    max=A[0];
-    for(i=0;i<n;i++)
-    {
-        if(max < A[i])
-        {
-            max=A[i];
-        }
-    }
-    return max;
-}
 void Insert(int index,int x)
 {
     Node *t;
