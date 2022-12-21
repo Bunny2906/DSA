@@ -1,6 +1,6 @@
-//Radix Sort.
-/*-->Unlike Bin/Bucket Sort, We need an auxilary array of size 10 
-     i.e;decimal representation of number rangs from 0-9.
+//Radix Sort using Linked List.
+/*-->Unlike Bin/Bucket Sort, We need an auxilary array of size just '10' i.e;decimal representation of number rangs from 0-9.
+     Radix sort uses comparitively very less space than bin/bucket sort. 
   -->In first pass, get remainder of each number after dividing it with 10.
      And then insert that element's Node at at 'remainder'th index in auxilary array.-->(A[i]%10)th index.
   -->Now Delete the elements from auxilary array and copy back those elements into original array in deleted sequence.
@@ -8,7 +8,7 @@
      and get remainder.Now insert element's Node into auxilary array at 'remainder'th index.-->((A[i]/10)%10)th index.
   -->Now delete the elements in auxilary array and copy back to original array.
   -->In third pass, do the same with --> ((A[i]/100)%10)
-  -->If the numbers in our list are 'n' digit numbers then we need 'n' no.of passes.
+  -->If the largest number in our list is 'n' digit numbers then we need 'n' no.of passes for sorting.
 */
 #include<iostream>
 using namespace std;
