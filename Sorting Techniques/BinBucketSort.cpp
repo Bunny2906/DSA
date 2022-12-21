@@ -31,12 +31,13 @@ int findMax(int A[],int n)
     }
     return max;
 }
-void Insert(Node *p,int x)
+void Insert(struct Bin b,int x)
 {
     Node *t;
     t=new Node;
     t->data=x;
     t->next=NULL;
+    Node *p=b.bins[x];
     if(p==NULL)
     {
         b.bins[x]=t;
@@ -71,7 +72,7 @@ void bucketSort(int A[],int n)
     }
     for(i=0;i<n;i++)
     {
-        Insert(b.bins[A[i]],A[i]);
+        Insert(b,A[i]);
     }
     i=0,j=0;
     while(i<max+1)
