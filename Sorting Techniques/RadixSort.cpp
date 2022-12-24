@@ -1,5 +1,5 @@
 //Radix Sort using Linked List.
-/*-->Unlike Bin/Bucket Sort, We need an auxilary array of size just '10' i.e;decimal representation of number rangs from 0-9.
+/*-->Unlike Bin/Bucket Sort, We need an auxilary array of size just '10' i.e;decimal representation of number ranges from 0-9.
      Radix sort uses comparitively very less space than bin/bucket sort. 
   -->In first pass, get remainder of each number after dividing it with 10.
      And then insert that element's Node at at 'remainder'th index in auxilary array.-->(A[i]%10)th index.
