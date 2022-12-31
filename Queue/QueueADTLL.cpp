@@ -1,3 +1,4 @@
+//Implementing Queue using Linked List.
 #include<iostream>
 using namespace std;
 struct Node
@@ -101,3 +102,22 @@ int main()
     last();
     return 0;
 }
+/*
+Output:
+10
+20
+30
+40
+
+
+element at position 1 is :10
+
+deleted 10
+20
+30
+40
+
+first element is :20
+last element is :40
+
+*/
