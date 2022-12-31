@@ -1,3 +1,4 @@
+//Stack using C++ class.
 #include<iostream>
 using namespace std;
 class Node
@@ -106,3 +107,17 @@ int main()
     //s.stackTop();
     return 0;
 }
+/*
+Sample Output:
+50
+40
+30
+20
+10
+
+popped 50
+element at position 2 is :30
+
+stack is not empty
+*/
+
