@@ -1,3 +1,4 @@
+//Implementing Stack using Linked List.
 #include<iostream>
 using namespace std;
 struct Node
@@ -88,3 +89,14 @@ int main()
     isEmpty();
     return 0;
 }
+/*
+Output:
+30
+20
+10
+
+element at position 1 is :30
+popped 30
+stack top is :20
+stack is not empty
+*/
