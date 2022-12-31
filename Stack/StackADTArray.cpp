@@ -1,3 +1,4 @@
+//Implementing Stack using Array.
 #include<iostream>
 using namespace std;
 struct Stack 
@@ -101,3 +102,26 @@ int main()
     isEmpty(s);
     return 0;
 }   
+/*
+Sample Output:
+enter the size of the stack :5
+enter no of elements to insert :4
+enter element 1 :1
+enter element 2 :2
+enter element 3 :3
+enter element 4 :4
+stack elements are :
+4
+3
+2
+1
+top element is :4
+deleted 4
+stack elements are :
+3
+2
+1
+top element is :3
+element at index 2 is :3
+*/
+
