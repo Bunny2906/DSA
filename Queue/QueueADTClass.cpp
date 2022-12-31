@@ -1,3 +1,4 @@
+//Queue using C++ class.
 #include<iostream>
 using namespace std;
 class Queue
@@ -88,3 +89,16 @@ int main()
     q.display();
     return 0;
 }
+/*
+Output:
+enter no of elements to insert :4
+enter element 1 :1
+enter element 2 :2
+enter element 3 :3
+enter element 4 :4
+
+first element is :1
+last element is :4
+deleted :1
+2 3 4
+*/
