@@ -1,3 +1,4 @@
+//Implementing Queue using Array.
 #include<iostream>
 using namespace std;
 struct Array
@@ -101,3 +102,20 @@ int main()
     last(arr);
     return 0;
 }
+/*
+Sample Output:
+enter the size of queue :5
+enter no of elements to insert :4
+enter element 1 :1
+enter element 2 :2
+enter element 3 :3
+enter element 4 :4
+1 2 3 4
+deleted :1
+2 3 4
+queue is not full
+queue is not empty
+first element is :1
+last element is :4
+*/
+
