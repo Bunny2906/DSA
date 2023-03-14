@@ -21,7 +21,7 @@ struct Bin
 {
     Node **bins;
 }b;
-void Insert(int index,int x)
+void insert(int index,int x)
 {
     Node *t;
     t=new Node;
@@ -40,14 +40,15 @@ void Insert(int index,int x)
 }
 int Delete(struct Bin b,int i)
 {
-    Node *temp,*p=b.bins[i];
+    Node *p=b.bins[i];
+    Node *temp;
     int x;
-    if(b.bins[i])
+    if(p)
     {
         temp=b.bins[i];
         b.bins[i]=b.bins[i]->next;
         x=temp->data;
-        delete temp;  
+        free(temp);
     }
     return x;
 }
@@ -59,56 +60,53 @@ void RadixSort(int A[],int n)
     {
         b.bins[i]=NULL;
     }
-    //Pass-1
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
-        Insert(A[i]%10,A[i]);
-    }
-    i=0,j=0;
+        insert(A[i]%10,A[i]);
+    }                              //Pass-1
+    i=0;
+    j=0;
     while(i<10)
     {
         while(b.bins[i]!=NULL)
         {
             A[j++]=Delete(b,i);
-        }
-        i++;
+        }i++;
     }
-    //Pass-2
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
-        Insert((A[i]/10)%10,A[i]);
-    }
-    i=0,j=0;
+        insert((A[i]/10)%10,A[i]);
+    }                              //Pass-2
+    i=0;
+    j=0;
     while(i<10)
     {
         while(b.bins[i]!=NULL)
         {
             A[j++]=Delete(b,i);
-        }
-        i++;
+        }i++;
     }
-    //Pass-3
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
-        Insert((A[i]/100)%10,A[i]);
-    }
-    i=0,j=0;
+        insert(A[i]%100,A[i]);
+    }                              //Pass-3
+    i=0;
+    j=0;
     while(i<10)
     {
         while(b.bins[i]!=NULL)
         {
             A[j++]=Delete(b,i);
-        }
-        i++;
+        }i++;
     }
 }
 int main()
 {
-    int A[]={301,700,450,654,496,166,990,522};
+    int A[]={332,657,123,12,0,34,789,342};
     RadixSort(A,8);
     for(int i=0;i<8;i++)
     {
-        cout<<A[i]<<" ";
+        printf("%d ",A[i]);
     }
     return 0;
 }
