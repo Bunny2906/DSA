@@ -10,6 +10,18 @@
   -->In third pass, do the same with --> ((A[i]/100)%10)
   -->If the largest number in our list is 'n' digit numbers then we need 'n' no.of passes for sorting.
 */
+//Radix Sort.
+/*-->Unlike Bin/Bucket Sort, We need an auxilary array of size 10 
+     i.e;decimal representation of number rangs from 0-9.
+  -->In first pass, get remainder of each number after dividing it with 10.
+     And then insert that element's Node at at 'remainder'th index in auxilary array.-->(A[i]%10)th index.
+  -->Now Delete the elements from auxilary array and copy back those elements into original array in deleted sequence.
+  -->In second pass, divide each element with 10 and divide the result again with 10 
+     and get remainder.Now insert element's Node into auxilary array at 'remainder'th index.-->((A[i]/10)%10)th index.
+  -->Now delete the elements in auxilary array and copy back to original array.
+  -->In third pass, do the same with --> ((A[i]/100)%10)
+  -->If the numbers in our list are 'n' digit numbers then we need 'n' no.of passes.
+*/
 #include<iostream>
 using namespace std;
 struct Node
@@ -21,7 +33,7 @@ struct Bin
 {
     Node **bins;
 }b;
-void insert(int index,int x)
+void Insert(int index,int x)
 {
     Node *t;
     t=new Node;
@@ -40,15 +52,14 @@ void insert(int index,int x)
 }
 int Delete(struct Bin b,int i)
 {
-    Node *p=b.bins[i];
-    Node *temp;
+    Node *temp,*p=b.bins[i];
     int x;
-    if(p)
+    if(b.bins[i])
     {
         temp=b.bins[i];
         b.bins[i]=b.bins[i]->next;
         x=temp->data;
-        free(temp);
+        delete temp;  
     }
     return x;
 }
@@ -60,56 +71,63 @@ void RadixSort(int A[],int n)
     {
         b.bins[i]=NULL;
     }
-    for(i=0;i<n;i++)
+    //Pass-1
+    for(int i=0;i<n;i++)
     {
-        insert(A[i]%10,A[i]);
-    }                              //Pass-1
-    i=0;
-    j=0;
-    while(i<10)
-    {
-        while(b.bins[i]!=NULL)
-        {
-            A[j++]=Delete(b,i);
-        }i++;
+        Insert(A[i]%10,A[i]);
     }
-    for(i=0;i<n;i++)
-    {
-        insert((A[i]/10)%10,A[i]);
-    }                              //Pass-2
-    i=0;
-    j=0;
+    i=0,j=0;
     while(i<10)
     {
         while(b.bins[i]!=NULL)
         {
             A[j++]=Delete(b,i);
-        }i++;
+        }
+        i++;
     }
-    for(i=0;i<n;i++)
+    //Pass-2
+    for(int i=0;i<n;i++)
     {
-        insert(A[i]%100,A[i]);
-    }                              //Pass-3
-    i=0;
-    j=0;
+        Insert((A[i]/10)%10,A[i]);
+    }
+    i=0,j=0;
     while(i<10)
     {
         while(b.bins[i]!=NULL)
         {
             A[j++]=Delete(b,i);
-        }i++;
+        }
+        i++;
+    }
+    //Pass-3
+    for(int i=0;i<n;i++)
+    {
+        Insert((A[i]/100)%10,A[i]);
+    }
+    i=0,j=0;
+    while(i<10)
+    {
+        while(b.bins[i]!=NULL)
+        {
+            A[j++]=Delete(b,i);
+        }
+        i++;
     }
 }
 int main()
 {
-    int A[]={332,657,123,12,0,34,789,342};
+    int A[]={301,700,450,654,496,166,990,522};
     RadixSort(A,8);
     for(int i=0;i<8;i++)
     {
-        printf("%d ",A[i]);
+        cout<<A[i]<<" ";
     }
     return 0;
 }
+/*
+Output:
+166 301 450 496 522 654 700 990
+*/
 /*
 Output:
 166 301 450 496 522 654 700 990
